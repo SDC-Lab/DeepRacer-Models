@@ -89,6 +89,5 @@ def reward_function(params):
 
 ### **Physical Track Test**
 
-<video width="640" height="360" controls>
-    <source src="../videos/v1-SpeedOnTrack.mp4" type="video/mp4">
-</video>
+https://github.com/SDC-Lab/DeepRacer-Models/assets/115546292/581db9bf-c458-45d3-a433-d1b258593eb8
+
