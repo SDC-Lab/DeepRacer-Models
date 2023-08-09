@@ -36,21 +36,21 @@ Bumps or uneven surfaces can hinder the agent's navigation and stability during 
 
 It is advisable to use discrete action spaces instead of continuous ones. Continuous action spaces have demonstrated issues, including significant halts and an inability to complete laps on the physical track.
 
-<!-- ### **Recommendation 9: Replicate The Simulated Environment** -->
+## **Model 1) StayOnTrack**
+This model is all about keeping the agent on the track. It is programmed to earn rewards for staying on the track and penalised when it goes off-track. It was cloned twice with the learning rate being reduced after the initial training. It was trained on the Re:Invent 2018 track.
 
-## **Model 1) v1-SpeedOnTrack**
+### **Hyperparameter Selection and Time**
 
-### **Hyperparameter Selection**
-
-| Hyperparameters                                                      | Values     |
-| -------------------------------------------------------------------- | ---------- |
-| Gradient descent batch size                                          | 64         |
-| Number of epochs                                                     | 10         |
-| Learning rate                                                        | 0.000001   |
-| Entropy                                                              | 0.01       |
-| Discount factor                                                      | 0.999      |
-| Loss type                                                            | Huber loss |
-| Number of experience episodes between each policy-updating iteration | 20         |
+| Hyperparameters and time                                             | Initial | Clone 1 | Clone 2    |
+| -------------------------------------------------------------------- | ------- | ------- | ---------- |
+| Gradient descent batch size                                          | 64      | 64      | 64         |
+| Number of epochs                                                     | 10      | 10      | 10         |
+| Learning rate                                                        | 0.001   | 0.00001 | 0.00000001 |
+| Entropy                                                              | 0.01    | 0.01    | 0.01       |
+| Discount factor                                                      | 0.999   | 0.999   | 0.999      |
+| Loss type                                                            | Huber   | Huber   | Huber      |
+| Number of experience episodes between each policy-updating iteration | 20      | 20      | 20         |
+| Time (mins.)                                                         | 120     | 60      | 120        |
 
 ### **Action Space**
 
@@ -72,6 +72,17 @@ It is advisable to use discrete action spaces instead of continuous ones. Contin
 |      13       |    30    |  1.6  |
 |      14       |    30    |  1.8  |
 
+### **Training Reward Graph**
+
+
+| Initial                                          | Clone 1                                          | Clone 2                                          |
+| ------------------------------------------------ | ------------------------------------------------ | ------------------------------------------------ |
+| ![v1](../images/v1-StayOnTrack-reward-graph.png) | ![v2](../images/v2-StayOnTrack-reward-graph.png) | ![v3](../images/v3-StayOnTrack-reward-graph.png) |
+
+
+
+
+
 ### **Reward Function**
 
 ```python
@@ -88,6 +99,4 @@ def reward_function(params):
 ```
 
 ### **Physical Track Test**
-
-https://github.com/SDC-Lab/DeepRacer-Models/assets/115546292/581db9bf-c458-45d3-a433-d1b258593eb8
 
