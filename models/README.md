@@ -173,6 +173,6 @@ def reward_function(params):
 
 ## Training Reward Graph
 
-| Initial                                                               | Clone 1                                                               | Clone 2                                                               |
-| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| <img src="Images/RewardGraph1.png" alt="Reward Graph 1" width="300"/> | <img src="Images/RewardGraph2.png" alt="Reward Graph 2" width="300"/> | <img src="Images/RewardGraph3.png" alt="Reward Graph 3" width="300"/> |
+| Initial                                                                         | Clone 1                                                                         | Clone 2                                                                         |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| <img src="../images/model1/RewardGraph1.png" alt="Reward Graph 1" width="300"/> | <img src="../images/model1/RewardGraph2.png" alt="Reward Graph 2" width="300"/> | <img src="../images/model1/RewardGraph3.png" alt="Reward Graph 3" width="300"/> |
