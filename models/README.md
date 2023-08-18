@@ -39,6 +39,21 @@ It is advisable to use discrete action spaces instead of continuous ones. Contin
 ## **Model 1) StayOnTrack**
 This model is all about keeping the agent on the track. It is programmed to earn rewards for staying on the track and penalised when it goes off-track. It was cloned twice with the learning rate being reduced after the initial training. It was trained on the Re:Invent 2018 track.
 
+### **Reward Function**
+
+```python
+def reward_function(params):
+    reward = 1e-3
+    PENALTY = 5.0
+
+    if not params['all_wheels_on_track']:
+        reward -= PENALTY * params['distance_from_center']
+    else:
+        reward += 1
+
+    return float(reward)
+```
+
 ### **Hyperparameter Selection and Time**
 
 | Hyperparameters and time                                             | Initial | Clone 1 | Clone 2    |
@@ -81,22 +96,83 @@ This model is all about keeping the agent on the track. It is programmed to earn
 
 
 
-
-
-### **Reward Function**
-
-```python
-def reward_function(params):
-    reward = 1e-3
-    PENALTY = 5.0
-
-    if not params['all_wheels_on_track']:
-        reward -= PENALTY * params['distance_from_center']
-    else:
-        reward += 1
-
-    return float(reward)
-```
-
 ### **Physical Track Test**
 
+## Model 1
+
+
+## Reward Function
+```python
+def reward_function(params):
+
+    # Read input parameters
+    all_wheels_on_track = params['all_wheels_on_track']
+    progress = params['progress']
+    distance_from_center = params['distance_from_center']
+    track_width = params['track_width']
+    speed = params['speed']
+    steering_angle = params['steering_angle']
+
+    # Initialize the reward with a small positive value
+    reward = 1e-3
+
+    # Reward based on progress
+    reward += progress
+
+    # Reward for staying on the track
+    if all_wheels_on_track:
+        reward += 10.0
+    else:
+        reward -= 10.0
+
+    # Calculate 3 markers that are at varying distances away from the center line
+    marker_1 = 0.1 * track_width
+    marker_2 = 0.25 * track_width
+    marker_3 = 0.5 * track_width
+
+    # Give higher reward if the car is closer to center line and vice versa
+    if distance_from_center <= marker_1:
+        reward += 1.0
+    elif distance_from_center <= marker_2:
+        reward += 0.5
+    elif distance_from_center <= marker_3:
+        reward += 0.1
+    else:
+        reward += 1e-3  # likely crashed/close to off track
+
+    # Reward for maintaining speed
+    reward += speed * 0.2
+
+    # Encourage smooth steering
+    if abs(steering_angle) < 10.0:
+        reward += 1.0
+    elif abs(steering_angle) < 20.0:
+        reward += 0.5
+    else:
+        reward -= 0.5
+
+    return float(reward)
+
+```
+
+### Hyperparameter Selection and Time
+
+| Hyperparameter and time                                              | Initial | Clone 1 | Clone 2 |
+| -------------------------------------------------------------------- | ------- | ------- | ------- |
+| Gradient descent batch size                                          | 64      | 128     | 128     |
+| Entropy                                                              | 0.01    | 0.01    | 0.01    |
+| Discount factor                                                      | 0.999   | 0.999   | 0.999   |
+| Learning rate                                                        | 0.0003  | 0.0001  | 0.0001  |
+| Number of experience episodes between each policy-updating iteration | 20      | 30      | 30      |
+| Number of epochs                                                     | 10      | 10      | 10      |
+| Time (mins)                                                          | 90      | 90      | 120     |
+| Min Speed (m/s)                                                      | 0.5     | 0.5     | 1.25    |
+| Max Speed (m/s)                                                      | 2.0     | 2.4     | 2.8     |
+
+
+
+## Training Reward Graph
+
+| Initial                                                               | Clone 1                                                               | Clone 2                                                               |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| <img src="Images/RewardGraph1.png" alt="Reward Graph 1" width="300"/> | <img src="Images/RewardGraph2.png" alt="Reward Graph 2" width="300"/> | <img src="Images/RewardGraph3.png" alt="Reward Graph 3" width="300"/> |
