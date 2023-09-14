@@ -175,7 +175,7 @@ def reward_function(params):
 | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
 | <img src="../images/model1/RewardGraph1.png" alt="Reward Graph 1" width="300"/> | <img src="../images/model1/RewardGraph2.png" alt="Reward Graph 2" width="300"/> | <img src="../images/model1/RewardGraph3.png" alt="Reward Graph 3" width="300"/> |
 
-## Model
+## NaviGator
 
 This reward function guides the DeepRacer vehicle by assessing speed, alignment with the track direction, and steering angle alignment, contributing to effective track navigation. Comprising weighted rewards and penalties, the function facilitates algorithmic learning and adaptation. Speed rewards encourage optimal performance by considering the vehicle's speed relative to predefined limits. Penalties discourage track departures, prioritizing on-track behavior. Alignment with the track direction is vital, with close orientation alignment yielding higher rewards, enhancing turning precision. The reward function also incentivizes steering alignment, promoting adherence to optimal trajectories for smoother turns. Ultimately, this comprehensive reward function exemplifies how reinforcement learning shapes intelligent driving behaviors, underlining its significance in autonomous vehicle advancement.
 
@@ -227,19 +227,37 @@ def reward_function(params):
 ### Hyperparameter Selection and Time
 
 | Hyperparameter and time                                              | Initial | Clone 1 | Clone 2 | Clone 3 | Clone 4 | Clone 5 | Clone 6 | Clone 7 |
-| -------------------------------------------------------------------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ---- |
+| -------------------------------------------------------------------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- |
 | Gradient descent batch size                                          | 64      | 64      | 64      | 64      | 64      | 64      | 128     | 64      |
-| Entropy                                                              | 0.01    | 0.01    | 0.01    | 0.01    | 0.01    | 0.01    | 0.01    | 0.01    | 0.01 |
+| Entropy                                                              | 0.01    | 0.01    | 0.01    | 0.01    | 0.01    | 0.01    | 0.01    | 0.01    |
 | Discount factor                                                      | 0.999   | 0.999   | 0.999   | 0.999   | 0.999   | 0.999   | 0.999   | 0.999   |
 | Learning rate                                                        | 0.0003  | 0.0003  | 0.0003  | 0.0003  | 0.0003  | 0.0003  | 0.0001  | 0.0003  |
 | Number of experience episodes between each policy-updating iteration | 20      | 20      | 20      | 20      | 20      | 20      | 20      | 20      |
 | Number of epochs                                                     | 10      | 10      | 10      | 10      | 10      | 10      | 10      | 10      |
 | Time (mins)                                                          | 90      | 90      | 90      | 90      | 90      | 90      | 90      | 90      |
-| Min Speed (m/s)                                                      | 0.5     | 0.5     | 1.25    |         |         |         |         |         |
-| Max Speed (m/s)                                                      | 2.0     | 2.4     | 2.8     |         |         |         |         |         |
+
+### **Action Space**
+
+| Action Number | Steering | Speed |
+| :-----------: | :------: | :---: |
+|       0       |   -30    |  1.4  |
+|       1       |   -30    |  1.5  |
+|       2       |   -30    |  1.8  |
+|       3       |   -15    |  1.4  |
+|       4       |   -15    |  1.5  |
+|       5       |   -15    |  1.8  |
+|       6       |    0     |  1.4  |
+|       7       |    0     |  1.5  |
+|       8       |    0     |  1.8  |
+|       9       |    15    |  1.5  |
+|      10       |    15    |  1.6  |
+|      11       |    15    |  1.8  |
+|      12       |    30    |  1.5  |
+|      13       |    30    |  1.6  |
+|      14       |    30    |  1.8  |
 
 ## Training Reward Graph
 
-| Initial                                                                     | Clone 1                                                                     | Clone 2                                                                     | Clone 3                                                                     | Clone 4                                                                     | Clone 5                                                                     | Clone 6                                                                     | Clone 7 |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | ------- |
-| <img src="../images/model3/Picture1.png" alt="Reward Graph 1" width="300"/> | <img src="../images/model3/Picture2.png" alt="Reward Graph 2" width="300"/> | <img src="../images/model3/Picture3.png" alt="Reward Graph 3" width="300"/> | <img src="../images/model3/Picture4.png" alt="Reward Graph 4" width="300"/> | <img src="../images/model3/Picture5.png" alt="Reward Graph 5" width="300"/> | <img src="../images/model3/Picture6.png" alt="Reward Graph 6" width="300"/> | <img src="../images/model3/Picture7.png" alt="Reward Graph 7" width="300"/> |
+| Initial                                                                    | Clone 1                                                                   | Clone 2                                                                   | Clone 3                                                                   | Clone 4                                                         | Clone 5                                                                   | Clone 6                                                                   | Clone 7                                                                   |
+| -------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | --------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| <img src="../images/model3/Initial.png" alt="Reward Graph 1" width="300"/> | <img src="../images/model3/Clone1.png" alt="Reward Graph 2" width="300"/> | <img src="../images/model3/Clone2.png" alt="Reward Graph 3" width="300"/> | <img src="../images/model3/Clone3.png" alt="Reward Graph 4" width="300"/> | <img src="../images/model3/" alt="Reward Graph 5" width="300"/> | <img src="../images/model3/Clone5.png" alt="Reward Graph 6" width="300"/> | <img src="../images/model3/Clone6.png" alt="Reward Graph 7" width="300"/> | <img src="../images/model3/Clone7.png" alt="Reward Graph 8" width="300"/> |
