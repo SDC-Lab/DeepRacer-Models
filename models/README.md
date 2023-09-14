@@ -37,6 +37,7 @@ Bumps or uneven surfaces can hinder the agent's navigation and stability during 
 It is advisable to use discrete action spaces instead of continuous ones. Continuous action spaces have demonstrated issues, including significant halts and an inability to complete laps on the physical track.
 
 ## **Model 1) StayOnTrack**
+
 This model is all about keeping the agent on the track. It is programmed to earn rewards for staying on the track and penalised when it goes off-track. It was cloned twice with the learning rate being reduced after the initial training. It was trained on the Re:Invent 2018 track.
 
 ### **Reward Function**
@@ -89,19 +90,18 @@ def reward_function(params):
 
 ### **Training Reward Graph**
 
-
 | Initial                                          | Clone 1                                          | Clone 2                                          |
 | ------------------------------------------------ | ------------------------------------------------ | ------------------------------------------------ |
 | ![v1](../images/v1-StayOnTrack-reward-graph.png) | ![v2](../images/v2-StayOnTrack-reward-graph.png) | ![v3](../images/v3-StayOnTrack-reward-graph.png) |
 
-
-
 ### **Physical Track Test**
 
-## Model 1
+## CenterAlignModel
 
+The CentreAlignModel is designed with the primary objective of centering itself on the track, allowing for accurate steering and a consistent pace. By prioritising this centerline alignment strategy, the model aims to navigate the racing environment effectively. It was trained using the Re:Invent 2018 track as the basis for its learning process.
 
 ## Reward Function
+
 ```python
 def reward_function(params):
 
@@ -169,10 +169,77 @@ def reward_function(params):
 | Min Speed (m/s)                                                      | 0.5     | 0.5     | 1.25    |
 | Max Speed (m/s)                                                      | 2.0     | 2.4     | 2.8     |
 
-
-
 ## Training Reward Graph
 
 | Initial                                                                         | Clone 1                                                                         | Clone 2                                                                         |
 | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
 | <img src="../images/model1/RewardGraph1.png" alt="Reward Graph 1" width="300"/> | <img src="../images/model1/RewardGraph2.png" alt="Reward Graph 2" width="300"/> | <img src="../images/model1/RewardGraph3.png" alt="Reward Graph 3" width="300"/> |
+
+## Model
+
+This reward function guides the DeepRacer vehicle by assessing speed, alignment with the track direction, and steering angle alignment, contributing to effective track navigation. Comprising weighted rewards and penalties, the function facilitates algorithmic learning and adaptation. Speed rewards encourage optimal performance by considering the vehicle's speed relative to predefined limits. Penalties discourage track departures, prioritizing on-track behavior. Alignment with the track direction is vital, with close orientation alignment yielding higher rewards, enhancing turning precision. The reward function also incentivizes steering alignment, promoting adherence to optimal trajectories for smoother turns. Ultimately, this comprehensive reward function exemplifies how reinforcement learning shapes intelligent driving behaviors, underlining its significance in autonomous vehicle advancement.
+
+## Reward Function
+
+```python
+import math
+def reward_function(params):
+
+    # Reward weights
+    speed_weight = 100
+    heading_weight = 100
+    steering_weight = 50
+
+    # Initialize the reward based on current speed
+    max_speed_reward = 10 * 10
+    min_speed_reward = 3.33 * 3.33
+    abs_speed_reward = params['speed'] * params['speed']
+    speed_reward = (abs_speed_reward - min_speed_reward) / (max_speed_reward - min_speed_reward) * speed_weight
+
+    # Penalize if the car goes off track
+    if not params['all_wheels_on_track']:
+        return 1e-3
+
+    # Calculate the direction of the center line based on the closest waypoints
+    next_point = params['waypoints'][params['closest_waypoints'][1]]
+    prev_point = params['waypoints'][params['closest_waypoints'][0]]
+
+    # Calculate the direction in radius, arctan2(dy, dx), the result is (-pi, pi) in radians
+    track_direction = math.atan2(next_point[1] - prev_point[1], next_point[0] - prev_point[0])
+    # Convert to degree
+    track_direction = math.degrees(track_direction)
+
+    # Calculate the difference between the track direction and the heading direction of the car
+    direction_diff = abs(track_direction - params['heading'])
+    if direction_diff > 180:
+        direction_diff = 360 - direction_diff
+
+    abs_heading_reward = 1 - (direction_diff / 180.0)
+    heading_reward = abs_heading_reward * heading_weight
+
+    # Reward if steering angle is aligned with direction difference
+    abs_steering_reward = 1 - (abs(params['steering_angle'] - direction_diff) / 180.0)
+    steering_reward = abs_steering_reward * steering_weight
+
+    return speed_reward + heading_reward + steering_reward
+```
+
+### Hyperparameter Selection and Time
+
+| Hyperparameter and time                                              | Initial | Clone 1 | Clone 2 | Clone 3 | Clone 4 | Clone 5 | Clone 6 | Clone 7 |
+| -------------------------------------------------------------------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ---- |
+| Gradient descent batch size                                          | 64      | 64      | 64      | 64      | 64      | 64      | 128     | 64      |
+| Entropy                                                              | 0.01    | 0.01    | 0.01    | 0.01    | 0.01    | 0.01    | 0.01    | 0.01    | 0.01 |
+| Discount factor                                                      | 0.999   | 0.999   | 0.999   | 0.999   | 0.999   | 0.999   | 0.999   | 0.999   |
+| Learning rate                                                        | 0.0003  | 0.0003  | 0.0003  | 0.0003  | 0.0003  | 0.0003  | 0.0001  | 0.0003  |
+| Number of experience episodes between each policy-updating iteration | 20      | 20      | 20      | 20      | 20      | 20      | 20      | 20      |
+| Number of epochs                                                     | 10      | 10      | 10      | 10      | 10      | 10      | 10      | 10      |
+| Time (mins)                                                          | 90      | 90      | 90      | 90      | 90      | 90      | 90      | 90      |
+| Min Speed (m/s)                                                      | 0.5     | 0.5     | 1.25    |
+| Max Speed (m/s)                                                      | 2.0     | 2.4     | 2.8     |
+
+## Training Reward Graph
+
+| Initial                                                                     | Clone 1                                                                     | Clone 2                                                                     | Clone 3                                                                     | Clone 4                                                                     | Clone 5                                                                     | Clone 6                                                                     | Clone 7 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | ------- |
+| <img src="../images/model3/Picture1.png" alt="Reward Graph 1" width="300"/> | <img src="../images/model3/Picture2.png" alt="Reward Graph 2" width="300"/> | <img src="../images/model3/Picture3.png" alt="Reward Graph 3" width="300"/> | <img src="../images/model3/Picture4.png" alt="Reward Graph 4" width="300"/> | <img src="../images/model3/Picture5.png" alt="Reward Graph 5" width="300"/> | <img src="../images/model3/Picture6.png" alt="Reward Graph 6" width="300"/> | <img src="../images/model3/Picture7.png" alt="Reward Graph 7" width="300"/> |
