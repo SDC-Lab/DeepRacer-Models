@@ -235,8 +235,8 @@ def reward_function(params):
 | Number of experience episodes between each policy-updating iteration | 20      | 20      | 20      | 20      | 20      | 20      | 20      | 20      |
 | Number of epochs                                                     | 10      | 10      | 10      | 10      | 10      | 10      | 10      | 10      |
 | Time (mins)                                                          | 90      | 90      | 90      | 90      | 90      | 90      | 90      | 90      |
-| Min Speed (m/s)                                                      | 0.5     | 0.5     | 1.25    |
-| Max Speed (m/s)                                                      | 2.0     | 2.4     | 2.8     |
+| Min Speed (m/s)                                                      | 0.5     | 0.5     | 1.25    |         |         |         |         |         |
+| Max Speed (m/s)                                                      | 2.0     | 2.4     | 2.8     |         |         |         |         |         |
 
 ## Training Reward Graph
 
