@@ -1,6 +1,8 @@
 # DeepRacer-Models
 
-Welcome to the AWS DeepRacer Physical Track Performance Enhancement repository! This repository contains valuable insights, practical recommendations, and model details to help you elevate the performance of your AWS DeepRacer on physical racetracks. Achieving success in the physical realm requires a combination of stability, consistency, and speed. Whether you're a student or a seasoned DeepRacer enthusiast, this repository will provide you with the knowledge you need to optimise your racing experience.
+## Overview
+
+This repository contains valuable insights, practical recommendations, and model details to help you elevate the performance of your AWS DeepRacer on physical racetracks. Achieving success in the physical environment requires a combination of stability, consistency, and speed. Whether you're a student or a seasoned DeepRacer enthusiast, this repository will provide you with the knowledge you need to optimise your racing experience.
 
 ## Table of Contents
 
@@ -14,7 +16,7 @@ Welcome to the AWS DeepRacer Physical Track Performance Enhancement repository! 
       6. [Recommendation 6: Proportionally Penalise Off-Track Behaviour](models/README.md/#recommendation-6-proportionally-penalise-off-track-behaviour)
       7. [Recommendation 7: Set Up The Track On A Flat Surface](models/README.md/#recommendation-7-set-up-the-track-on-a-flat-surface)
       8. [Recommendation 8: Use A Discrete Action Space](models/README.md/#recommendation-8-use-a-discrete-action-space)
-   2. [Model 1) StayOnTrack](models/README.md/#model-1-stayontrack)
+   2. [StayOnTrack](models/README.md/#model-1-stayontrack)
       1. [Reward Function](models/README.md/#reward-function)
       2. [Hyperparameter Selection and Time](models/README.md/#hyperparameter-selection-and-time)
       3. [Action Space](models/README.md/#action-space)
