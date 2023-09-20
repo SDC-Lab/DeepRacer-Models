@@ -1,5 +1,13 @@
 # DeepRacer-Models
 
+![Stars](https://img.shields.io/github/stars/SDC-Lab/DeepRacer-Models?style=flat-square&logo=GitHub)
+![Forks](https://img.shields.io/github/forks/SDC-Lab/DeepRacer-Models?style=flat-square&logo=GitHub)
+![RepoSize](https://img.shields.io/github/repo-size/SDC-Lab/DeepRacer-Models?style=flat-square&logo=GitHub)
+![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/t/SDC-Lab/DeepRacer-Models?style=flat-square&logo=GitHub)
+![GitHub last commit (branch)](https://img.shields.io/github/last-commit/SDC-Lab/DeepRacer-Models/main?style=flat-square&logo=GitHub&color=blue)
+[![Static Badge](https://img.shields.io/badge/SDC_Lab-Click%20Here-blue?style=flat-square&link=https%3A%2F%2Fsdclab.cdms.westernsydney.edu.au%2F)](https://sdclab.cdms.westernsydney.edu.au/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat-square&logo=linkedin)](https://www.linkedin.com/company/sdcomlab)
+
 ## Overview
 
 This repository contains valuable insights, practical recommendations, and model details to help you elevate the performance of your AWS DeepRacer on physical racetracks. Achieving success in the physical environment requires a combination of stability, consistency, and speed. Whether you're a student or a seasoned DeepRacer enthusiast, this repository will provide you with the knowledge you need to optimise your racing experience.
