@@ -96,11 +96,11 @@ def reward_function(params):
 
 ### **Physical Track Test**
 
-## CenterAlignModel
+## **Model 2) CenterAlignModel**
 
 The CentreAlignModel is designed with the primary objective of centering itself on the track, allowing for accurate steering and a consistent pace. By prioritising this centerline alignment strategy, the model aims to navigate the racing environment effectively. It was trained using the Re:Invent 2018 track as the basis for its learning process.
 
-## Reward Function
+### **Reward Function**
 
 ```python
 def reward_function(params):
@@ -155,7 +155,7 @@ def reward_function(params):
 
 ```
 
-### Hyperparameter Selection and Time
+### **Hyperparameter Selection and Time**
 
 | Hyperparameter and time                                              | Initial | Clone 1 | Clone 2 |
 | -------------------------------------------------------------------- | ------- | ------- | ------- |
@@ -175,11 +175,11 @@ def reward_function(params):
 | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
 | <img src="../images/model1/RewardGraph1.png" alt="Reward Graph 1" width="300"/> | <img src="../images/model1/RewardGraph2.png" alt="Reward Graph 2" width="300"/> | <img src="../images/model1/RewardGraph3.png" alt="Reward Graph 3" width="300"/> |
 
-## NaviGator
+## **Model 3) NaviGator**
 
 This reward function guides the DeepRacer vehicle by assessing speed, alignment with the track direction, and steering angle alignment, contributing to effective track navigation. Comprising weighted rewards and penalties, the function facilitates algorithmic learning and adaptation. Speed rewards encourage optimal performance by considering the vehicle's speed relative to predefined limits. Penalties discourage track departures, prioritizing on-track behavior. Alignment with the track direction is vital, with close orientation alignment yielding higher rewards, enhancing turning precision. The reward function also incentivizes steering alignment, promoting adherence to optimal trajectories for smoother turns. Ultimately, this comprehensive reward function exemplifies how reinforcement learning shapes intelligent driving behaviors, underlining its significance in autonomous vehicle advancement.
 
-## Reward Function
+### **Reward Function**
 
 ```python
 import math
@@ -224,7 +224,7 @@ def reward_function(params):
     return speed_reward + heading_reward + steering_reward
 ```
 
-### Hyperparameter Selection and Time
+### **Hyperparameter Selection and Time**
 
 | Hyperparameter and time                                              | Initial | Clone 1 | Clone 2 | Clone 3 | Clone 4 | Clone 5 | Clone 6 | Clone 7 |
 | -------------------------------------------------------------------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- |
@@ -256,7 +256,7 @@ def reward_function(params):
 |      13       |    30    |  1.6  |
 |      14       |    30    |  1.8  |
 
-## Training Reward Graph
+### **Training Reward Graph**
 
 | Initial                                                                    | Clone 1                                                                   | Clone 2                                                                   | Clone 3                                                                   | Clone 4                                                                   | Clone 5                                                                   | Clone 6                                                                   | Clone 7                                                                   |
 | -------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
