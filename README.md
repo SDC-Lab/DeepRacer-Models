@@ -71,15 +71,20 @@ The repository is organised as follows:
    - _CenterAlignModel_: Videos showcasing the CenterAlignModel in action.
    - _NaviGator_: Videos illustrating the performance of the NaviGator model.
 
-### Helpful Links
+## Helpful Links
 
 Here are some helpful links and resources to enhance your AWS DeepRacer experience and understanding of reinforcement learning:
+
+### SDC Lab Links
+
+- [Introduction to AWS DeepRacer](https://www.linkedin.com/pulse/introduction-aws-deepracer-bahman-javadi) - An introductory article providing insights into AWS DeepRacer by Bahman Javadi.
+- [AWS DeepRacer Models For Beginners](https://www.linkedin.com/pulse/aws-deepracer-models-beginners-bahman-javadi?trk=article-ssr-frontend-pulse_more-articles_related-content-card) - A guide aimed at beginners, covering AWS DeepRacer models by Bahman Javadi.
+- [Sample of Reward Functions for AWS DeepRacer](https://www.linkedin.com/pulse/samples-reward-functions-aws-deepracer-bahman-javadi?trk=article-ssr-frontend-pulse_more-articles_related-content-card) - An exploration of sample reward functions for AWS DeepRacer by Bahman Javadi.
+
+### Other Links
 
 - [AWS DeepRacer Documentation](https://docs.aws.amazon.com/deepracer/latest/developerguide/what-is-deepracer.html) - Official documentation for AWS DeepRacer, including getting started guides, tutorials, and reference materials.
 - [AWS DeepRacer Console](https://console.aws.amazon.com/deepracer/home) - Access the AWS DeepRacer Console to manage your DeepRacer car, create simulations, and deploy custom models.
 - [AWS DeepRacer Community](https://deepracing.io/) - Join the AWS DeepRacer Community to connect with other enthusiasts, ask questions, and share your experiences.
 - [Reinforcement Learning on AWS](https://aws.amazon.com/reinforcement-learning/) - Learn more about reinforcement learning on AWS and explore additional resources and services.
 - [Deep Reinforcement Learning](https://www.deeplearningbook.org/contents/rl.html) - The Deep Learning book by Ian Goodfellow, Yoshua Bengio, and Aaron Courville has a section on reinforcement learning that provides a solid theoretical foundation.
-- [Introduction to AWS DeepRacer](https://www.linkedin.com/pulse/introduction-aws-deepracer-bahman-javadi) - An introductory article providing insights into AWS DeepRacer by Bahman Javadi.
-- [AWS DeepRacer Models For Beginners](https://www.linkedin.com/pulse/aws-deepracer-models-beginners-bahman-javadi?trk=article-ssr-frontend-pulse_more-articles_related-content-card) - A guide aimed at beginners, covering AWS DeepRacer models by Bahman Javadi.
-- [Sample of Reward Functions for AWS DeepRacer](https://www.linkedin.com/pulse/samples-reward-functions-aws-deepracer-bahman-javadi?trk=article-ssr-frontend-pulse_more-articles_related-content-card) - An exploration of sample reward functions for AWS DeepRacer by Bahman Javadi.
