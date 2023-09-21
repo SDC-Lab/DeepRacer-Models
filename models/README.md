@@ -96,6 +96,8 @@ def reward_function(params):
 
 ### **Physical Track Test**
 
+[![SDCLab YouTube Video](https://img.youtube.com/vi/EVdQdp2Hi0M/0.jpg)](https://www.youtube.com/watch?v=EVdQdp2Hi0M)
+
 ## **Model 2) CenterAlignModel**
 
 The CentreAlignModel is designed with the primary objective of centering itself on the track, allowing for accurate steering and a consistent pace. By prioritising this centerline alignment strategy, the model aims to navigate the racing environment effectively. It was trained using the Re:Invent 2018 track as the basis for its learning process.
