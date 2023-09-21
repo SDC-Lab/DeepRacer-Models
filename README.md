@@ -1,5 +1,6 @@
 # DeepRacer-Models
 
+![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FSDC-Lab%2FDeepRacer-Models&countColor=%23007ec6&style=flat-square)
 ![Stars](https://img.shields.io/github/stars/SDC-Lab/DeepRacer-Models?style=flat-square&logo=GitHub)
 ![Forks](https://img.shields.io/github/forks/SDC-Lab/DeepRacer-Models?style=flat-square&logo=GitHub)
 ![RepoSize](https://img.shields.io/github/repo-size/SDC-Lab/DeepRacer-Models?style=flat-square&logo=GitHub)
