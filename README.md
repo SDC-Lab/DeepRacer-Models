@@ -84,9 +84,9 @@ The repository is organised as follows:
 
 3. **videos/**: This directory stores videos demonstrating the DeepRacer models in action on physical tracks. Videos can provide a more visual understanding of the models' performance.
 
-   - _StayOnTrack_: Videos demonstrating the performance of the StayOnTrack model.
-   - _CenterAlignModel_: Videos showcasing the CenterAlignModel in action.
-   - _NaviGator_: Videos illustrating the performance of the NaviGator model.
+   - _StayOnTrack_: Video demonstrating the performance of the StayOnTrack model.
+   - _CenterAlignModel_: Video showcasing the CenterAlignModel in action.
+   - _NaviGator_: Video illustrating the performance of the NaviGator model.
 
 ## Helpful Links
 
