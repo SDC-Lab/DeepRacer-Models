@@ -110,14 +110,14 @@ def reward_function(params):
 
 ## **Model 2) CenterAlignModel**
 
-The CenterAlignModel is designed with the primary objective of centering itself on the track, allowing for accurate steering and a consistent pace. By prioritising this centerline alignment strategy, the model aims to navigate the racing environment effectively. It was trained using the Re:Invent 2018 track as the basis for its learning process.
+The CenterAlignModel is designed with the primary objective of centering itself on the track, allowing for accurate steering and a consistent pace. By prioritising this center line alignment strategy, the model aims to navigate the racing environment effectively. It was trained using the Re:Invent 2018 track as the basis for its learning process.
 
 ### **Reward Function**
 
 ```python
 def reward_function(params):
 
-    # Read input parameters
+    # Read input parameters.
     all_wheels_on_track = params['all_wheels_on_track']
     progress = params['progress']
     distance_from_center = params['distance_from_center']
@@ -125,24 +125,24 @@ def reward_function(params):
     speed = params['speed']
     steering_angle = params['steering_angle']
 
-    # Initialize the reward with a small positive value
+    # Initialise the reward with a small positive value.
     reward = 1e-3
 
-    # Reward based on progress
+    # Reward based on progress.
     reward += progress
 
-    # Reward for staying on the track
+    # Reward for staying on the track.
     if all_wheels_on_track:
         reward += 10.0
     else:
         reward -= 10.0
 
-    # Calculate 3 markers that are at varying distances away from the center line
+    # Calculate 3 markers that are at varying distances away from the center line.
     marker_1 = 0.1 * track_width
     marker_2 = 0.25 * track_width
     marker_3 = 0.5 * track_width
 
-    # Give higher reward if the car is closer to center line and vice versa
+    # Give higher reward if the car is closer to center line and vice versa.
     if distance_from_center <= marker_1:
         reward += 1.0
     elif distance_from_center <= marker_2:
@@ -150,12 +150,12 @@ def reward_function(params):
     elif distance_from_center <= marker_3:
         reward += 0.1
     else:
-        reward += 1e-3  # likely crashed/close to off track
+        reward += 1e-3  # likely crashed/close to off track.
 
-    # Reward for maintaining speed
+    # Reward for maintaining speed.
     reward += speed * 0.2
 
-    # Encourage smooth steering
+    # Encourage smooth steering.
     if abs(steering_angle) < 10.0:
         reward += 1.0
     elif abs(steering_angle) < 20.0:
@@ -199,7 +199,7 @@ def reward_function(params):
 
 ## **Model 3) NaviGator**
 
-This reward function guides the DeepRacer vehicle by assessing speed, alignment with the track direction, and steering angle alignment, contributing to effective track navigation. Comprising weighted rewards and penalties, the function facilitates algorithmic learning and adaptation. Speed rewards encourage optimal performance by considering the vehicle's speed relative to predefined limits. Penalties discourage track departures, prioritizing on-track behavior. Alignment with the track direction is vital, with close orientation alignment yielding higher rewards, enhancing turning precision. The reward function also incentivizes steering alignment, promoting adherence to optimal trajectories for smoother turns. Ultimately, this comprehensive reward function exemplifies how reinforcement learning shapes intelligent driving behaviors, underlining its significance in autonomous vehicle advancement.
+This reward function guides the DeepRacer vehicle by assessing speed, alignment with the track direction, and steering angle alignment, contributing to effective track navigation. Comprising weighted rewards and penalties, the function facilitates algorithmic learning and adaptation. Speed rewards encourage optimal performance by considering the vehicle's speed relative to predefined limits. Penalties discourage track departures, prioritizing on-track behavior. Alignment with the track direction is vital, with close orientation alignment yielding higher rewards, enhancing turning precision. The reward function also incentivises steering alignment, promoting adherence to optimal trajectories for smoother turns. Ultimately, this comprehensive reward function exemplifies how reinforcement learning shapes intelligent driving behaviors, underlining its significance in autonomous vehicle advancement.
 
 ### **Reward Function**
 
@@ -212,13 +212,13 @@ def reward_function(params):
     heading_weight = 100
     steering_weight = 50
 
-    # Initialize the reward based on current speed
+    # Initialise the reward based on current speed
     max_speed_reward = 10 * 10
     min_speed_reward = 3.33 * 3.33
     abs_speed_reward = params['speed'] * params['speed']
     speed_reward = (abs_speed_reward - min_speed_reward) / (max_speed_reward - min_speed_reward) * speed_weight
 
-    # Penalize if the car goes off track
+    # Penalise if the car goes off track
     if not params['all_wheels_on_track']:
         return 1e-3
 
@@ -286,11 +286,11 @@ def reward_function(params):
 
 ### **Simulation Evaluation**
 
-| Trial | Time (MM:SS.mmm) | Trial results (% track completed) | Status       | Off-track | Off-track | Crashes | Crash penalty |
-| ----- | ---------------- | --------------------------------- | ------------ | --------- | --------- | ------- | ------------- |
-| 1     | 00:11.716        | 100%                              | Lap complete | 0         | --        | 0       | --            |
-| 2     | 00:11.732        | 100%                              | Lap complete | 0         | --        | 0       | --            |
-| 3     | 00:12.062        | 100%                              | Lap complete | 0         | --        | 0       | --            |
+| Trial | Time (MM:SS.mmm) | Trial results (% track completed) | Status       | Off-track | Off-track penalty | Crashes | Crash penalty |
+| ----- | ---------------- | --------------------------------- | ------------ | --------- | ----------------- | ------- | ------------- |
+| 1     | 00:11.716        | 100%                              | Lap complete | 0         | --                | 0       | --            |
+| 2     | 00:11.732        | 100%                              | Lap complete | 0         | --                | 0       | --            |
+| 3     | 00:12.062        | 100%                              | Lap complete | 0         | --                | 0       | --            |
 
 ### **Physical Track Test**
 
