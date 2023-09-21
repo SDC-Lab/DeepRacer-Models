@@ -96,7 +96,9 @@ def reward_function(params):
 
 ### **Physical Track Test**
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/EVdQdp2Hi0M" frameborder="0" allowfullscreen></iframe>
+[![SDC Lab YouTube Video](https://img.youtube.com/vi/EVdQdp2Hi0M/0.jpg)](https://www.youtube.com/watch?v=EVdQdp2Hi0M)
+
+**Watch the video demonstration [here](https://www.youtube.com/watch?v=EVdQdp2Hi0M).**
 
 ## **Model 2) CenterAlignModel**
 
@@ -176,6 +178,12 @@ def reward_function(params):
 | Initial                                                                         | Clone 1                                                                         | Clone 2                                                                         |
 | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
 | <img src="../images/model1/RewardGraph1.png" alt="Reward Graph 1" width="300"/> | <img src="../images/model1/RewardGraph2.png" alt="Reward Graph 2" width="300"/> | <img src="../images/model1/RewardGraph3.png" alt="Reward Graph 3" width="300"/> |
+
+### **Physical Track Test**
+
+[![CenterAlignModel](https://img.youtube.com/vi/5wTFzl3KEDo/0.jpg)](https://www.youtube.com/watch?v=5wTFzl3KEDo)
+
+**Watch the video demonstration [here](https://www.youtube.com/watch?v=5wTFzl3KEDo).**
 
 ## **Model 3) NaviGator**
 
@@ -263,3 +271,9 @@ def reward_function(params):
 | Initial                                                                    | Clone 1                                                                   | Clone 2                                                                   | Clone 3                                                                   | Clone 4                                                                   | Clone 5                                                                   | Clone 6                                                                   | Clone 7                                                                   |
 | -------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
 | <img src="../images/model3/Initial.png" alt="Reward Graph 1" width="300"/> | <img src="../images/model3/Clone1.png" alt="Reward Graph 2" width="300"/> | <img src="../images/model3/Clone2.png" alt="Reward Graph 3" width="300"/> | <img src="../images/model3/Clone3.png" alt="Reward Graph 4" width="300"/> | <img src="../images/model3/Clone4.png" alt="Reward Graph 5" width="300"/> | <img src="../images/model3/Clone5.png" alt="Reward Graph 6" width="300"/> | <img src="../images/model3/Clone6.png" alt="Reward Graph 7" width="300"/> | <img src="../images/model3/Clone7.png" alt="Reward Graph 8" width="300"/> |
+
+### **Physical Track Test**
+
+[![NaviGator](https://img.youtube.com/vi/yUdbHqmEdBk/0.jpg)](https://www.youtube.com/watch?v=yUdbHqmEdBk)
+
+**Watch the video demonstration [here](https://www.youtube.com/watch?v=yUdbHqmEdBk).**
