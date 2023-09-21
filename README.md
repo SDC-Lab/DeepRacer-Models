@@ -109,5 +109,4 @@ Here are some helpful links and resources to enhance your AWS DeepRacer experien
 - [AWS DeepRacer Documentation](https://docs.aws.amazon.com/deepracer/latest/developerguide/what-is-deepracer.html) - Official documentation for AWS DeepRacer, including getting started guides, tutorials, and reference materials.
 - [AWS DeepRacer Console](https://console.aws.amazon.com/deepracer/home) - Access the AWS DeepRacer Console to manage your DeepRacer car, create simulations, and deploy custom models.
 - [AWS DeepRacer Community](https://deepracing.io/) - Join the AWS DeepRacer Community to connect with other enthusiasts, ask questions, and share your experiences.
-- [Reinforcement Learning on AWS](https://aws.amazon.com/reinforcement-learning/) - Learn more about reinforcement learning on AWS and explore additional resources and services.
-- [Deep Reinforcement Learning](https://www.deeplearningbook.org/contents/rl.html) - The Deep Learning book by Ian Goodfellow, Yoshua Bengio, and Aaron Courville has a section on reinforcement learning that provides a solid theoretical foundation.
+- [Deep Reinforcement Learning](https://www.deeplearningbook.org/) - The Deep Learning book by Ian Goodfellow, Yoshua Bengio, and Aaron Courville has a section on reinforcement learning that provides a solid theoretical foundation.
