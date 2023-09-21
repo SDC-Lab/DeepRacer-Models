@@ -1,14 +1,20 @@
-# DeepRacer-Models
+<h1 align='center'>DeepRacer-Models</h1>
+
+<div align='center'>
 
 ![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FSDC-Lab%2FDeepRacer-Models&countColor=%23007ec6&style=flat-square)
+
 ![Stars](https://img.shields.io/github/stars/SDC-Lab/DeepRacer-Models?style=flat-square&logo=GitHub)
 ![Forks](https://img.shields.io/github/forks/SDC-Lab/DeepRacer-Models?style=flat-square&logo=GitHub)
 ![RepoSize](https://img.shields.io/github/repo-size/SDC-Lab/DeepRacer-Models?style=flat-square&logo=GitHub)
 ![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/t/SDC-Lab/DeepRacer-Models?style=flat-square&logo=GitHub)
 ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/SDC-Lab/DeepRacer-Models/main?style=flat-square&logo=GitHub&color=blue)
+
 [![Static Badge](https://img.shields.io/badge/SDC_Lab-Click%20Here-blue?style=flat-square&link=https%3A%2F%2Fsdclab.cdms.westernsydney.edu.au%2F)](https://sdclab.cdms.westernsydney.edu.au/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat-square&logo=linkedin)](https://www.linkedin.com/company/sdcomlab)
 [![SDC Lab YT](https://img.shields.io/badge/YouTube-%40SDCLab-blue?style=flat-square&logo=YouTube)](https://www.youtube.com/@SDCLab/videos)
+
+</div>
 
 ## Overview
 
