@@ -68,7 +68,7 @@ def reward_function(params):
 | Number of experience episodes between each policy-updating iteration | 20      | 20      | 20         |
 | Time (mins.)                                                         | 120     | 60      | 120        |
 
-### **Action Space**
+### **Discrete Action Space**
 
 | Action Number | Steering | Speed |
 | :-----------: | :------: | :---: |
@@ -90,9 +90,9 @@ def reward_function(params):
 
 ### **Training Reward Graph**
 
-| Initial                                          | Clone 1                                          | Clone 2                                          |
-| ------------------------------------------------ | ------------------------------------------------ | ------------------------------------------------ |
-| ![v1](../images/v1-StayOnTrack-reward-graph.png) | ![v2](../images/v2-StayOnTrack-reward-graph.png) | ![v3](../images/v3-StayOnTrack-reward-graph.png) |
+| Initial                             | Clone 1                            | Clone 2                            |
+| ----------------------------------- | ---------------------------------- | ---------------------------------- |
+| ![v1](../images/model1/Initial.png) | ![v2](../images/model1/Clone1.png) | ![v3](../images/model1/Clone2.png) |
 
 ### **Simulation Evaluation**
 
@@ -181,11 +181,13 @@ def reward_function(params):
 | Min Speed (m/s)                                                      | 0.5     | 0.5     | 1.25    |
 | Max Speed (m/s)                                                      | 2.0     | 2.4     | 2.8     |
 
+### **Continuous Action Space**
+
 ### **Training Reward Graph**
 
-| Initial                                                                         | Clone 1                                                                         | Clone 2                                                                         |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| <img src="../images/model1/RewardGraph1.png" alt="Reward Graph 1" width="300"/> | <img src="../images/model1/RewardGraph2.png" alt="Reward Graph 2" width="300"/> | <img src="../images/model1/RewardGraph3.png" alt="Reward Graph 3" width="300"/> |
+| Initial                                                                    | Clone 1                                                                   | Clone 2                                                                   |
+| -------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| <img src="../images/model2/Initial.png" alt="Reward Graph 1" width="300"/> | <img src="../images/model2/Clone1.png" alt="Reward Graph 2" width="300"/> | <img src="../images/model2/Clone2.png" alt="Reward Graph 3" width="300"/> |
 
 ### **Simulation Evaluation**
 
@@ -256,7 +258,7 @@ def reward_function(params):
 | Number of epochs                                                     | 10      | 10      | 10      | 10      | 10      | 10      | 10      | 10      |
 | Time (mins)                                                          | 90      | 90      | 90      | 90      | 90      | 90      | 90      | 90      |
 
-### **Action Space**
+### **Discrete Action Space**
 
 | Action Number | Steering | Speed |
 | :-----------: | :------: | :---: |
