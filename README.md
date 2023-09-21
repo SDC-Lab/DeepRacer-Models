@@ -7,6 +7,7 @@
 ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/SDC-Lab/DeepRacer-Models/main?style=flat-square&logo=GitHub&color=blue)
 [![Static Badge](https://img.shields.io/badge/SDC_Lab-Click%20Here-blue?style=flat-square&link=https%3A%2F%2Fsdclab.cdms.westernsydney.edu.au%2F)](https://sdclab.cdms.westernsydney.edu.au/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat-square&logo=linkedin)](https://www.linkedin.com/company/sdcomlab)
+[![SDC Lab YT](https://img.shields.io/badge/YouTube-%40SDCLab-blue?style=flat-square&logo=YouTube)](https://www.youtube.com/@SDCLab/videos)
 
 ## Overview
 
