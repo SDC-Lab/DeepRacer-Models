@@ -94,6 +94,14 @@ def reward_function(params):
 | ------------------------------------------------ | ------------------------------------------------ | ------------------------------------------------ |
 | ![v1](../images/v1-StayOnTrack-reward-graph.png) | ![v2](../images/v2-StayOnTrack-reward-graph.png) | ![v3](../images/v3-StayOnTrack-reward-graph.png) |
 
+### **Simulation Evaluation**
+
+| Trial | Time (MM:SS.mmm) | Trial results (% track completed) | Status       | Off-track | Off-track penalty | Crashes | Crash penalty |
+| ----- | ---------------- | --------------------------------- | ------------ | --------- | ----------------- | ------- | ------------- |
+| 1     | 00:15.357        | 100%                              | Lap complete | 2         | 4 seconds         | 0       | --            |
+| 2     | 00:11.068        | 100%                              | Lap complete | 0         | --                | 0       | --            |
+| 3     | 00:10.662        | 100%                              | Lap complete | 0         | --                | 0       | --            |
+
 ### **Physical Track Test**
 
 [![SDC Lab YouTube Video](https://img.youtube.com/vi/EVdQdp2Hi0M/0.jpg)](https://www.youtube.com/watch?v=EVdQdp2Hi0M)
@@ -102,7 +110,7 @@ def reward_function(params):
 
 ## **Model 2) CenterAlignModel**
 
-The CentreAlignModel is designed with the primary objective of centering itself on the track, allowing for accurate steering and a consistent pace. By prioritising this centerline alignment strategy, the model aims to navigate the racing environment effectively. It was trained using the Re:Invent 2018 track as the basis for its learning process.
+The CenterAlignModel is designed with the primary objective of centering itself on the track, allowing for accurate steering and a consistent pace. By prioritising this centerline alignment strategy, the model aims to navigate the racing environment effectively. It was trained using the Re:Invent 2018 track as the basis for its learning process.
 
 ### **Reward Function**
 
@@ -178,6 +186,8 @@ def reward_function(params):
 | Initial                                                                         | Clone 1                                                                         | Clone 2                                                                         |
 | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
 | <img src="../images/model1/RewardGraph1.png" alt="Reward Graph 1" width="300"/> | <img src="../images/model1/RewardGraph2.png" alt="Reward Graph 2" width="300"/> | <img src="../images/model1/RewardGraph3.png" alt="Reward Graph 3" width="300"/> |
+
+### **Simulation Evaluation**
 
 ### **Physical Track Test**
 
@@ -271,6 +281,14 @@ def reward_function(params):
 | Initial                                                                    | Clone 1                                                                   | Clone 2                                                                   | Clone 3                                                                   | Clone 4                                                                   | Clone 5                                                                   | Clone 6                                                                   | Clone 7                                                                   |
 | -------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
 | <img src="../images/model3/Initial.png" alt="Reward Graph 1" width="300"/> | <img src="../images/model3/Clone1.png" alt="Reward Graph 2" width="300"/> | <img src="../images/model3/Clone2.png" alt="Reward Graph 3" width="300"/> | <img src="../images/model3/Clone3.png" alt="Reward Graph 4" width="300"/> | <img src="../images/model3/Clone4.png" alt="Reward Graph 5" width="300"/> | <img src="../images/model3/Clone5.png" alt="Reward Graph 6" width="300"/> | <img src="../images/model3/Clone6.png" alt="Reward Graph 7" width="300"/> | <img src="../images/model3/Clone7.png" alt="Reward Graph 8" width="300"/> |
+
+### **Simulation Evaluation**
+
+| Trial | Time (MM:SS.mmm) | Trial results (% track completed) | Status       | Off-track | Off-track | Crashes | Crash penalty |
+| ----- | ---------------- | --------------------------------- | ------------ | --------- | --------- | ------- | ------------- |
+| 1     | 00:11.716        | 100%                              | Lap complete | 0         | --        | 0       | --            |
+| 2     | 00:11.732        | 100%                              | Lap complete | 0         | --        | 0       | --            |
+| 3     | 00:12.062        | 100%                              | Lap complete | 0         | --        | 0       | --            |
 
 ### **Physical Track Test**
 
