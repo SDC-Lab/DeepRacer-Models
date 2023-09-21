@@ -96,7 +96,7 @@ def reward_function(params):
 
 ### **Physical Track Test**
 
-[![SDCLab YouTube Video](https://img.youtube.com/vi/EVdQdp2Hi0M/0.jpg)](https://www.youtube.com/watch?v=EVdQdp2Hi0M)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EVdQdp2Hi0M" frameborder="0" allowfullscreen></iframe>
 
 ## **Model 2) CenterAlignModel**
 
