@@ -178,10 +178,15 @@ def reward_function(params):
 | Number of experience episodes between each policy-updating iteration | 20      | 30      | 30      |
 | Number of epochs                                                     | 10      | 10      | 10      |
 | Time (mins)                                                          | 90      | 90      | 120     |
-| Min Speed (m/s)                                                      | 0.5     | 0.5     | 1.25    |
-| Max Speed (m/s)                                                      | 2.0     | 2.4     | 2.8     |
 
 ### **Continuous Action Space**
+
+|     | Speed | Steering |
+| --- | :---: | :------: |
+| Min | 1.25  |   -30    |
+| Max |  2.8  |    30    |
+
+|
 
 ### **Training Reward Graph**
 
@@ -190,6 +195,12 @@ def reward_function(params):
 | <img src="../images/model2/Initial.png" alt="Reward Graph 1" width="300"/> | <img src="../images/model2/Clone1.png" alt="Reward Graph 2" width="300"/> | <img src="../images/model2/Clone2.png" alt="Reward Graph 3" width="300"/> |
 
 ### **Simulation Evaluation**
+
+| Trial | Time (MM:SS.mmm) | Trial results (% track completed) | Status       | Off-track | Off-track penalty | Crashes | Crash penalty |
+| ----- | ---------------- | --------------------------------- | ------------ | --------- | ----------------- | ------- | ------------- |
+| 1     | 00:10.471        | 100%                              | Lap complete | 0         | --                | 0       | --            |
+| 2     | 00:10.592        | 100%                              | Lap complete | 0         | --                | 0       | --            |
+| 3     | 00:10.471        | 100%                              | Lap complete | 0         | --                | 0       | --            |
 
 ### **Physical Track Test**
 
