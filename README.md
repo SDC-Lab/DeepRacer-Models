@@ -1,4 +1,4 @@
-<h1 align='center'>DeepRacer-Models</h1>
+<h1 align='center'>AWS DeepRacer Models</h1>
 
 <div align='center'>
 
