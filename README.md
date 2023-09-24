@@ -49,7 +49,7 @@ This repository contains valuable insights, practical recommendations, and model
    4. [NaviGator](models/README.md/#model-3-navigator)
       1. [Reward Function](models/README.md/#reward-function-2)
       2. [Hyperparameter Selection and Time](models/README.md/#hyperparameter-selection-and-time-2)
-      3. [Action Space](models/README.md/#discrete-action-space-1)
+      3. [Discrete Action Space](models/README.md/#discrete-action-space-1)
       4. [Training Reward Graph](models/README.md/#training-reward-graph-2)
       5. [Simulation Evaluation](models/README.md/#simulation-evaluation-2)
       6. [Physical Track Test](models/README.md/#physical-track-test-2)
