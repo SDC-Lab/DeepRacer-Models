@@ -94,6 +94,10 @@ The repository is organised as follows:
    - _CenterAlignModel_: Video showcasing the CenterAlignModel in action.
    - _NaviGator_: Video illustrating the performance of the NaviGator model.
 
+## License
+
+This project is licensed under the terms of the MIT License. See the [LICENSE](LICENSE) file for details.
+
 ## Helpful Links
 
 Here are some helpful links and resources to enhance your AWS DeepRacer experience and understanding of reinforcement learning:
