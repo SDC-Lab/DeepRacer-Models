@@ -210,7 +210,7 @@ def reward_function(params):
 
 ## **Model 3) NaviGator**
 
-This reward function guides the DeepRacer vehicle by assessing speed, alignment with the track direction, and steering angle alignment, contributing to effective track navigation. Comprising weighted rewards and penalties, the function facilitates algorithmic learning and adaptation. Speed rewards encourage optimal performance by considering the vehicle's speed relative to predefined limits. Penalties discourage track departures, prioritizing on-track behavior. Alignment with the track direction is vital, with close orientation alignment yielding higher rewards, enhancing turning precision. The reward function also incentivises steering alignment, promoting adherence to optimal trajectories for smoother turns. Ultimately, this comprehensive reward function exemplifies how reinforcement learning shapes intelligent driving behaviors, underlining its significance in autonomous vehicle advancement.
+The NaviGator model emphasises effective track navigation through the evaluation of speed, alignment with the track direction, and steering angle alignment. It utilises a reward function with weighted factors to facilitate algorithmic learning and adaptation.
 
 ### **Reward Function**
 
